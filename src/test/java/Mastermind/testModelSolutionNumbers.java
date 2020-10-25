@@ -3,7 +3,7 @@ package Mastermind;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-public class testModelSolutionNumbers {
+public class TestModelSolutionNumbers {
 	
 	@Test public void testSolution() {
 		ModelSolutionNumbers mrn = new ModelSolutionNumbers();

@@ -1,8 +1,8 @@
-package Mastermind;
+package models;
 
 import java.util.Random;
 
-public class ModelSolutionNumbers {
+public class SolutionNumbers {
 	//private static Random randomCreator;
 	private static int numRandom0, numRandom1, numRandom2, numRandom3;
 	static int [] arraySolution;

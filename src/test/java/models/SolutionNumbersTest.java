@@ -1,12 +1,15 @@
-package Mastermind;
+package models;
 
 import org.junit.Test;
+
+import models.SolutionNumbers;
+
 import static org.junit.Assert.*;
 
-public class TestModelSolutionNumbers {
+public class SolutionNumbersTest {
 	
 	@Test public void testSolution() {
-		ModelSolutionNumbers mrn = new ModelSolutionNumbers();
+		SolutionNumbers mrn = new SolutionNumbers();
 		int[] arraySolution = new int[4];
 		arraySolution = mrn.solution(arraySolution);
 		

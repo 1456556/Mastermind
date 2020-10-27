@@ -1,4 +1,6 @@
-package Mastermind;
+package models;
+
+import views.Teclat;
 
 public class MockTeclat extends Teclat {
 	//Introduirem una solució correcta

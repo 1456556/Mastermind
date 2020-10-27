@@ -1,4 +1,4 @@
-package Mastermind;
+package models;
 
 public class BlackBalls {
 	//Comprova si hi ha dígits correctes en llocs incorrectes

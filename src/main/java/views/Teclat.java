@@ -19,4 +19,10 @@ public class Teclat {
 		
 	}
 	
+	public int menuOption() {
+		int option;
+		option = teclat.nextInt();
+		return option;
+	}
+	
 }

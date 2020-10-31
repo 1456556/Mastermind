@@ -23,6 +23,10 @@ public class MockTeclat extends Teclat {
 		return arrayAttempts;
 	}
 	
+	public int mockMenuOption() {
+		int intents = 1;
+		return intents;
+	}
 	
 
 }

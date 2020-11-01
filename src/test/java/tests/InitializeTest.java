@@ -2,14 +2,14 @@ package tests;
 
 import org.junit.Test;
 
-import models.SolutionNumbers;
+import models.Initialize;
 
 import static org.junit.Assert.*;
 
-public class SolutionNumbersTest {
+public class InitializeTest {
 	
 	@Test public void testSolution() {
-		SolutionNumbers mrn = new SolutionNumbers();
+		Initialize mrn = new Initialize(10);
 		int[] arraySolution = new int[4];
 		arraySolution = mrn.solution(arraySolution);
 		

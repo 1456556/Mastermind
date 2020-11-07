@@ -58,7 +58,8 @@ public class Initialize {
 	}
 	
 	
-	
+	//Aqui haurem de separar el string i posar els valors al arrayAttempts
+	//Hauriem de introduir per parametre tambe el arrayAttempts??
 	public boolean introduceArrayAttempts(String value) {
 		return true;
 	}

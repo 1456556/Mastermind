@@ -46,7 +46,23 @@ public class InitializeTest {
 	
 	// Comprobar que els valors introduits son numeros entre 0 y 9, y tambe diferents entre ells
 	@Test public void testCheckNumber() {
+        //Cridem al metode MockTeclat() per tal de que introdueixi un valor (value)
+		//A continuacio fem el test
 		
+		MockTeclat mt = new MockTeclat("1", "1234");
+		String value = mt.getSelection();
+		boolean checkNum = true;
+		if(value.length() != 4) {
+			checkNum = false;
+        }else {
+            try {
+                Integer.parseInt(value);
+                checkNum = true;
+            } catch (NumberFormatException e) {
+            	checkNum = false;
+            }
+        }
+		assertTrue(checkNum);
 	}
 	
 	// Comprobar que s'introdueixen els valors correctament a l'array

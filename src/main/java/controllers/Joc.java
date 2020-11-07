@@ -33,8 +33,7 @@ public class Joc {
 				
 			}
 			menu.clear();
-			
-		} while(menu.getOption() != "0");
+		} while(!"0".equals(menu.getOption()));
 		System.exit(0);
 	}
 }

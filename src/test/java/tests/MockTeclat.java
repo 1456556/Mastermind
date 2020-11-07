@@ -1,8 +1,6 @@
-package models;
+package tests;
 
-import views.Teclat;
-
-public class MockTeclat extends Teclat {
+public class MockTeclat {
 	
 	private int option;
 	private int attempt0, attempt1, attempt2, attempt3;

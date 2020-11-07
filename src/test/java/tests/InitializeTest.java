@@ -41,4 +41,17 @@ public class InitializeTest {
 		assertTrue(range2);
 		assertTrue(range3);
 	}
+	
+	
+	
+	// Comprobar que els valors introduits son numeros entre 0 y 9, y tambe diferents entre ells
+	@Test public void testCheckNumber() {
+		
+	}
+	
+	// Comprobar que s'introdueixen els valors correctament a l'array
+	@Test public void testIntroduceArrayAttempts() {
+		
+	}
+	
 }

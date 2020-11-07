@@ -4,10 +4,10 @@ package views;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class Menu {
+public class ShowScreen {
 	private String option;
 		
-	public Menu() {
+	public ShowScreen() {
 		this.option = "0";
 	}
 		
@@ -34,6 +34,17 @@ public class Menu {
 		System.out.println("Prem enter per continuar..");
 		new java.util.Scanner(System.in).nextLine();
 	}
+	
+	public void values() {
+		System.out.println("Introdueix la suposoció: ");
+	}
+	
+	public void checkNumber() {
+		System.out.println("ERROR: numero incorrecte");
+		System.out.println("");
+	}
+	
+	
 
 	public String getOption() {
 		return option;

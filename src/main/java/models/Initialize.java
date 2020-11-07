@@ -5,7 +5,7 @@ import java.util.Random;
 public class Initialize {
 	private int tempNumRandom0, tempNumRandom1, tempNumRandom2;
 	static int arraySolution[];
-	private int arrayAttempts[][];
+	private String arrayAttempts[][];
 	private int attempt;
 	private Random randomCreator = new Random();
 	
@@ -13,7 +13,7 @@ public class Initialize {
 		this.tempNumRandom0 = 0;
 		this.tempNumRandom1 = 0;
 		this.tempNumRandom2 = 0;
-		this.arrayAttempts = new int[attempt][6];
+		this.arrayAttempts = new String[attempt][6];
 		this.attempt = attempt;
 		Initialize.arraySolution = null;
 	}
@@ -51,6 +51,19 @@ public class Initialize {
 			numRandomAux3 = Math.abs(randomCreator.nextInt()) % 10;
 		return numRandomAux3;
 	}
+	
+	
+	public boolean checkNumber(String value) {
+		return true;
+	}
+	
+	
+	
+	public boolean introduceArrayAttempts(String value) {
+		return true;
+	}
+	
+	
 	
 	
 

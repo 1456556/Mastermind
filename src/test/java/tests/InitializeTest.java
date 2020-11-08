@@ -14,12 +14,13 @@ public class InitializeTest {
 		mrn.solution();
 		arraySolution = mrn.getArraySolution();
 		
-		assertNotEquals(arraySolution[0], arraySolution[1]);
-		assertNotEquals(arraySolution[0], arraySolution[2]);
-		assertNotEquals(arraySolution[0], arraySolution[3]);
-		assertNotEquals(arraySolution[1], arraySolution[2]);
-		assertNotEquals(arraySolution[1], arraySolution[3]);
-		assertNotEquals(arraySolution[2], arraySolution[3]);
+		for(int firstNumber = 0; firstNumber < 4; firstNumber++) {
+			for(int secondNumber = 0; secondNumber < 4; secondNumber++) {
+				if(arraySolution[firstNumber] != arraySolution[secondNumber]){
+					assertNotEquals(arraySolution[firstNumber], arraySolution[secondNumber]);  
+				}
+			}
+		}
 		
 		boolean range = false;
 		for(int index = 0; index < 4; index++) {

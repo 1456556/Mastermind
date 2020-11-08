@@ -11,7 +11,8 @@ public class InitializeTest {
 	@Test public void testSolution() {
 		Initialize mrn = new Initialize(10);
 		int[] arraySolution = new int[4];
-		arraySolution = mrn.solution(arraySolution);
+		mrn.solution();
+		arraySolution = mrn.getArraySolution();
 		
 		//Tots els 4 números han de ser diferents entre ells
 		assertNotEquals(arraySolution[0], arraySolution[1]);
@@ -53,13 +54,13 @@ public class InitializeTest {
 		String value = mt.getSelection();
 		boolean checkNum = true;
 		if(value.length() != 4) {
-			checkNum = false;
+			//checkNum = false;
         }else {
             try {
                 Integer.parseInt(value);
                 checkNum = true;
             } catch (NumberFormatException e) {
-            	checkNum = false;
+            	//checkNum = false;
             }
         }
 		assertTrue(checkNum);

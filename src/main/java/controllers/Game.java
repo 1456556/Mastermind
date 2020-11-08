@@ -21,6 +21,7 @@ public class Game {
 			switch(showScreen.getOption()) {
 				case "1":
 					Initialize game10Attemps = new Initialize(10);
+					game10Attemps.solution();
 											
 					do {
 						showScreen.values();
@@ -29,8 +30,7 @@ public class Game {
 						
 					}while(game10Attemps.checkNumber(value) == false);
 					
-					// primero: crear check if numbers equals (para que no ponga todo 0)
-					// llamar introduceArrayAttemps para poner los valores separados por string[1][2][3][4] (ejemplo: "hola" "h" "o" ..
+					game10Attemps.introduceArrayAttempts(value);
 					
 					break;
 				case "2":

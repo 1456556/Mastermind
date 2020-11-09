@@ -5,26 +5,36 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
 import models.Balls;
+
 import static org.junit.Assert.*;
 
 public class BallsTest {
 	
 
-	@Test public void testCheckWhiteBalls(int arrayAttempts[][], int arraySolution[], int index) {
-		Balls whiteBalls = new Balls("white");
+	@Test public void testCheckWhiteBalls() {
+		Balls whiteBalls = new Balls("whiteBall");
 		
-		//Aquí necesitaríamos un getArrayAttemps, getArraySolution y getIndex en la clase Balls
-		//y borrar los parámetros de entrada?
-		for (int i = 0; i < arraySolution.length; i++)
-			assertEquals(arrayAttempts[index][i], arraySolution[i]);
+		String arrayAttempts[][] = new String[10][6];
+		arrayAttempts[1][0] = "1";
+		arrayAttempts[1][1] = "7";
+		arrayAttempts[1][2] = "9";
+		arrayAttempts[1][3] = "9";
 		
+		int[] arraySolution = new int[4];
+		arraySolution[0] = 1;
+		arraySolution[1] = 6;
+		arraySolution[2] = 2;
+		arraySolution[3] = 9;
+
+		boolean checkBalls = whiteBalls.checkWhiteBalls(arrayAttempts, arraySolution, 1);
+		
+		assertTrue(checkBalls);
+
 	}
 	
 	@Test public void testCheckBlackBalls(int arrayAttempts[][], int arraySolution[], int index) {
-		Balls blackBalls = new Balls("black");
+		Balls blackBalls = new Balls("blackBall");
 		
-		//Aquí necesitaríamos un getArrayAttemps, getArraySolution y getIndex en la clase Balls
-		//y borrar los parámetros de entrada?
 		for (int i = 0; i < arraySolution.length; i++){
 			assertEquals(arrayAttempts[index][i], arraySolution[(i+1)%4]);
 			assertEquals(arrayAttempts[index][i], arraySolution[(i+2)%4]);

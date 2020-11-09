@@ -41,7 +41,7 @@ public class ShowScreen {
 	
 	public void checkNumber() {
 		System.out.println("ERROR: numero incorrecte");
-		System.out.println("");
+		System.out.println(""); 
 	}
 	
 	

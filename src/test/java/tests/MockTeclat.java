@@ -2,8 +2,8 @@ package tests;
 
 public class MockTeclat {
 	
-	private String option;//opcio menu
-	private String selection;//jugada
+	private String option;
+	private String selection;
 	
 	public MockTeclat(String option, String selection){
 		this.option = option;
@@ -11,9 +11,7 @@ public class MockTeclat {
 	}
 	
 	
-	//Introduirem una solució correcta
 	public int[][] mockArraySolution(int arrayAttempts[][], int index) {
-		//Aqui haurem de separar el string i posar els valors al arrayAttempts
 		
 		return arrayAttempts;
 	}

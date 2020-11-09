@@ -9,7 +9,7 @@ public class Initialize {
 	private Random randomCreator = new Random();
 	
 	public Initialize(int maxAttempt) {
-		this.arrayAttempts = new String[maxAttempt][6];
+		this.arrayAttempts = new String[maxAttempt][6]; 
 		this.attempt = 1;
 		this.arraySolution = new int[4];
 	}
@@ -18,7 +18,7 @@ public class Initialize {
 		for(int index = 0; index < 4; index++) {
 			arraySolution[index] = Math.abs(randomCreator.nextInt()) % 10;
 			random();
-			System.out.println(arraySolution[index]);
+			System.out.println(arraySolution[index]); //borrar
 		}
 		
 		return arraySolution;
@@ -54,10 +54,7 @@ public class Initialize {
 
         for(int index = 0; index < 4; index++) {
             arrayAttempts[attempt][index] = Character.toString(valueSeparate[index]);
-        }
-
-        this.attempt++; 
-        
+        }  
         return arrayAttempts;
 	}
 	

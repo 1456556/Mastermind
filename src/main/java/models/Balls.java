@@ -8,11 +8,23 @@ public class Balls {
 	
 	public Balls(String color) {
 		this.color = color;
-		this.numberBalls = 0;
+		this.numberBalls = 0;  
 	}
 	
-	public void checkWhiteBalls(int arrayAttempts[][], int arraySolution[], int index) {
+	public boolean checkWhiteBalls(String arrayAttempts[][], int arraySolution[], int attempt) {
+		boolean checkIt = false;
+		String stringArray[] = new String[arraySolution.length];
 		
+		for (int index = 0; index < arraySolution.length; index++) {			
+			stringArray[index] = String.valueOf(arraySolution[index]);
+			
+			if(arrayAttempts[attempt][index] == stringArray[index]) { 
+				this.numberBalls++;
+				checkIt = true; 
+			}
+		}
+		
+		return checkIt;
 	}
 	
 	public void checkBlackBalls(int arrayAttempts[][], int arraySolution[], int index) {

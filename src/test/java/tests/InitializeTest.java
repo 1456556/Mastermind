@@ -11,8 +11,7 @@ public class InitializeTest {
 	@Test public void testSolution() {
 		Initialize mrn = new Initialize(10);
 		int[] arraySolution = new int[4];
-		mrn.solution();
-		arraySolution = mrn.getArraySolution();
+		arraySolution = mrn.solution();
 		
 		for(int firstNumber = 0; firstNumber < 4; firstNumber++) {
 			for(int secondNumber = 0; secondNumber < 4; secondNumber++) {

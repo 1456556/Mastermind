@@ -38,7 +38,7 @@ public class Initialize {
 	
 	public boolean checkNumber(String value) {
         if(value.length() != 4) {
-            return false;
+            return false; 
         }else {
             try {
                 Integer.parseInt(value);
@@ -49,10 +49,18 @@ public class Initialize {
         }
     }
 	
-	public void introduceArrayAttempts(String value) {
-		
-	}
+	public String[][] introduceArrayAttempts(String value) {
+		char[] valueSeparate = value.toCharArray();
 
+        for(int index = 0; index < 4; index++) {
+            arrayAttempts[attempt][index] = Character.toString(valueSeparate[index]);
+        }
+
+        this.attempt++; 
+        
+        return arrayAttempts;
+	}
+	
 	
 
 	public int[] getArraySolution() {
@@ -63,6 +71,22 @@ public class Initialize {
 		this.arraySolution = arraySolution;
 	}
 
+	public String[][] getArrayAttempts() {
+		return arrayAttempts;
+	}
+
+	public void setArrayAttempts(String[][] arrayAttempts) {
+		this.arrayAttempts = arrayAttempts;
+	}
+
+	public int getAttempt() {
+		return attempt;
+	}
+
+	public void setAttempt(int attempt) {
+		this.attempt = attempt;
+	}
+
 	public Random getRandomCreator() {
 		return randomCreator;
 	}
@@ -70,5 +94,6 @@ public class Initialize {
 	public void setRandomCreator(Random randomCreator) {
 		this.randomCreator = randomCreator;
 	}
+
 
 }

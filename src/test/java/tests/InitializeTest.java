@@ -16,7 +16,7 @@ public class InitializeTest {
 		
 		for(int firstNumber = 0; firstNumber < 4; firstNumber++) {
 			for(int secondNumber = 0; secondNumber < 4; secondNumber++) {
-				if(arraySolution[firstNumber] != arraySolution[secondNumber]){
+				if(firstNumber != secondNumber){
 					assertNotEquals(arraySolution[firstNumber], arraySolution[secondNumber]);  
 				}
 			}
@@ -24,8 +24,9 @@ public class InitializeTest {
 		
 		boolean range = false;
 		for(int index = 0; index < 4; index++) {
-			if(arraySolution[index] < 10 && arraySolution[index] >= 0)
+			if(arraySolution[index] < 10 && arraySolution[index] >= 0) {
 				range = true; 
+			}
 			assertTrue(range);
 		}
 	}
@@ -36,11 +37,48 @@ public class InitializeTest {
 		Initialize mrn = new Initialize(10);
 		boolean checkNum = mrn.checkNumber("1234");
 		assertTrue(checkNum);
+		
+		boolean checkNum2 = mrn.checkNumber("123");
+		assertFalse(checkNum2);
+		
+		boolean checkNum3 = mrn.checkNumber("12345");
+		assertFalse(checkNum3);
+		
+		boolean checkNum4 = mrn.checkNumber("a123");
+		assertFalse(checkNum4);
+		
+		boolean checkNum5 = mrn.checkNumber("123a");
+		assertFalse(checkNum5);
+		
+		boolean checkNum6 = mrn.checkNumber("abcd");
+		assertFalse(checkNum6);
+		
+		boolean checkNum7 = mrn.checkNumber("abc");
+		assertFalse(checkNum7);
+		
+		boolean checkNum8 = mrn.checkNumber("abcde");
+		assertFalse(checkNum8);
+		
+		boolean checkNum9 = mrn.checkNumber("abc1");
+		assertFalse(checkNum9);
+		
+		boolean checkNum10 = mrn.checkNumber("1bcd");
+		assertFalse(checkNum10);
+		
+		boolean checkNum11 = mrn.checkNumber("");
+		assertFalse(checkNum11); 
 	}
 	
 
 	@Test public void testIntroduceArrayAttempts() {
-		// HACER TEST introduceArrayAttempts() -> Preguntar profe
+		Initialize mrn = new Initialize(10);
+		String arrayAttempts[][] = mrn.introduceArrayAttempts("2893");
+		
+		assertEquals(arrayAttempts[1][0], "2");
+		assertEquals(arrayAttempts[1][1], "8");
+		assertEquals(arrayAttempts[1][2], "9");
+		assertEquals(arrayAttempts[1][3], "3");
+
 	}
 	
 }

@@ -17,8 +17,10 @@ public class Balls {
 		
 		for (int index = 0; index < arraySolution.length; index++) {			
 			stringArray[index] = String.valueOf(arraySolution[index]);
-			
-			if(arrayAttempts[attempt][index] == stringArray[index]) { 
+			System.out.println("arrayAttempts: " + arrayAttempts[attempt][index]+ " index: " + index);
+			System.out.println("stringArray "+ stringArray[index]+ " index: " + index);
+			System.out.println("");
+			if(arrayAttempts[attempt][index].equals(stringArray[index])) { 
 				this.numberBalls++;
 				checkIt = true; 
 			}

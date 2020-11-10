@@ -34,6 +34,24 @@ public class InitializeTest {
 	
 	@Test public void testCheckNumber() {
 		Initialize mrn = new Initialize(10);
+		MockCheckNumber mck = new MockCheckNumber();
+		
+		mck.introduceArrayCorrectNumbers();
+		mck.introduceArrayFailNumbers();
+		
+		for (int index = 0; index < mck.getArrayCorrectNumbers().length; index++) {
+			boolean checkCorrectNumbers = mrn.checkNumber(mck.getArrayCorrectNumbers()[index]);
+			assertTrue(checkCorrectNumbers);
+		}
+		
+		
+		for (int index = 0; index < mck.getArrayFailNumbers().length; index++) {
+			boolean checkFailNumbers = mrn.checkNumber(mck.getArrayFailNumbers()[index]);
+			assertFalse(checkFailNumbers);
+		}
+		
+		/*
+		
 		boolean checkNum = mrn.checkNumber("1234");
 		assertTrue(checkNum);
 		
@@ -65,7 +83,9 @@ public class InitializeTest {
 		assertFalse(checkNum10);
 		
 		boolean checkNum11 = mrn.checkNumber("");
-		assertFalse(checkNum11); 
+		assertFalse(checkNum11);
+		
+		*/
 	}
 	
 

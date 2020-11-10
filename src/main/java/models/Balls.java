@@ -27,7 +27,20 @@ public class Balls {
 	}
 	
 	public boolean checkBlackBalls(String arrayAttempts[][], int arraySolution[], int attempt) {
-		return false;
+		boolean checkIt = false;
+		String stringArray[] = new String[arraySolution.length];
+		
+		for (int index = 0; index < arraySolution.length; index++) {
+			for (int index1 = 1; index1 < arraySolution.length; index1++) {
+				stringArray[index] = String.valueOf(arraySolution[(index+index1)%4]);
+				if(arrayAttempts[attempt][index].equals(stringArray[index])) {
+					this.numberBalls++;
+					checkIt = true; 
+				}
+			}
+		}
+		
+		return checkIt;
 	}
 	
 

@@ -38,7 +38,7 @@ public class BallsTest {
 	}
 	
 	@Test public void testCheckBlackBalls() {
-		Balls whiteBalls = new Balls("blackBall");
+		Balls blackBalls = new Balls("blackBall");
 		
 		String arrayAttempts[][] = new String[10][6];
 		arrayAttempts[1][0] = "1";
@@ -52,7 +52,7 @@ public class BallsTest {
 		arraySolution[2] = 2;
 		arraySolution[3] = 1;
 
-		boolean checkBalls = whiteBalls.checkWhiteBalls(arrayAttempts, arraySolution, 1);
+		boolean checkBalls = blackBalls.checkBlackBalls(arrayAttempts, arraySolution, 1);
 		assertTrue(checkBalls);
 		
 		int[] arraySolution1 = new int[4];
@@ -61,7 +61,7 @@ public class BallsTest {
 		arraySolution1[2] = 7;
 		arraySolution1[3] = 8;
 
-		boolean checkBalls1 = whiteBalls.checkWhiteBalls(arrayAttempts, arraySolution1, 1);
+		boolean checkBalls1 = blackBalls.checkWhiteBalls(arrayAttempts, arraySolution1, 1);
 		
 		assertFalse(checkBalls1);
 	}

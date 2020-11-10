@@ -15,12 +15,9 @@ public class Balls {
 		boolean checkIt = false;
 		String stringArray[] = new String[arraySolution.length];
 		
-		for (int index = 0; index < arraySolution.length; index++) {			
+		for (int index = 0; index < arraySolution.length; index++) {
 			stringArray[index] = String.valueOf(arraySolution[index]);
-			System.out.println("arrayAttempts: " + arrayAttempts[attempt][index]+ " index: " + index);
-			System.out.println("stringArray "+ stringArray[index]+ " index: " + index);
-			System.out.println("");
-			if(arrayAttempts[attempt][index].equals(stringArray[index])) { 
+			if(arrayAttempts[attempt][index].equals(stringArray[index])) {
 				this.numberBalls++;
 				checkIt = true; 
 			}
@@ -29,8 +26,8 @@ public class Balls {
 		return checkIt;
 	}
 	
-	public void checkBlackBalls(int arrayAttempts[][], int arraySolution[], int index) {
-
+	public boolean checkBlackBalls(String arrayAttempts[][], int arraySolution[], int attempt) {
+		return false;
 	}
 	
 
@@ -49,8 +46,4 @@ public class Balls {
 	public void setNumberBalls(int numberBalls) {
 		this.numberBalls = numberBalls;
 	}
-	
-	
-	
-	
 }

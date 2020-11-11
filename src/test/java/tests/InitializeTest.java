@@ -10,11 +10,11 @@ public class InitializeTest {
 	
 	@Test public void testSolution() {
 		Initialize mrn = new Initialize(10);
-		int[] arraySolution = new int[4];
+		int[] arraySolution = new int[4]; 
 		arraySolution = mrn.solution();
 		
 		for(int firstNumber = 0; firstNumber < 4; firstNumber++) {
-			for(int secondNumber = 0; secondNumber < 4; secondNumber++) {
+			for(int secondNumber = 0; secondNumber < 4; secondNumber++) { 
 				if(firstNumber != secondNumber){
 					assertNotEquals(arraySolution[firstNumber], arraySolution[secondNumber]);  
 				}
@@ -93,10 +93,10 @@ public class InitializeTest {
 		Initialize mrn = new Initialize(10);
 		String arrayAttempts[][] = mrn.introduceArrayAttempts("2893");
 		
-		assertEquals(arrayAttempts[1][0], "2");
-		assertEquals(arrayAttempts[1][1], "8");
-		assertEquals(arrayAttempts[1][2], "9");
-		assertEquals(arrayAttempts[1][3], "3");
+		assertEquals(arrayAttempts[0][0], "2");
+		assertEquals(arrayAttempts[0][1], "8");
+		assertEquals(arrayAttempts[0][2], "9");
+		assertEquals(arrayAttempts[0][3], "3");
 
 	}
 	

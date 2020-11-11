@@ -9,26 +9,30 @@ import views.ShowScreen;
 
 public class Game {
 	
+	// BORRAR GET Y SETS INUTILES
+	
 	public static void main(String[] args) throws IOException {
 		ShowScreen showScreen = new ShowScreen();
-		Scanner reader = new Scanner(System.in);
-		Balls whiteBall = new Balls("Blanca");
-		Balls blackBall = new Balls("Negra");
+		Scanner reader = new Scanner(System.in); 
+		Balls balls = new Balls();
 		
 		String value;
+		String selection;
 			
 		
 		do {
 			boolean finish = false;
 			showScreen.Pantalla();
-			String selection = reader.nextLine();
-			showScreen.setOption(selection);
-			switch(showScreen.getOption()) {
+			selection = reader.nextLine();
+			switch(selection) { 
 				case "1":
 					Initialize game = new Initialize(10);
 					game.solution();
 					
+					// mover a una funcion
 					while(finish != true) {
+						
+						// mover a una funcion
 						do {
 							showScreen.values();
 							value = reader.nextLine();
@@ -36,18 +40,32 @@ public class Game {
 							
 						}while(game.checkNumber(value) == false);
 						
-						System.out.println(game.getAttempt());
-						if((whiteBall.getNumberBalls() == 4 || game.getAttempt() == 10)) {
-							finish = true;
-						}else {
-							game.introduceArrayAttempts(value);
-							if(whiteBall.checkWhiteBalls(game.getArrayAttempts(), game.getArraySolution(), game.getAttempt())) {
-								// llamar a showscreen para decir: cuantas volas hay
-							}else {
-								// llamas a showscreen para decir: no hay bolas blancas
+						// mover a una funcion
+						game.introduceArrayAttempts(value);
+						
+						balls.checkWhiteBalls(game.getArrayAttempts(), game.getArraySolution(), game.getAttempt());
+						balls.checkBlackBalls(game.getArrayAttempts(), game.getArraySolution(), game.getAttempt());	
+						
+						game.setAttempt(game.getAttempt()+1); 
+						
+						
+						// mover a una funcion 
+						for(int firstNumber = 0; firstNumber < 10; firstNumber++) {
+							for(int secondNumber = 0; secondNumber < 4; secondNumber++) {  
+								if(game.getArrayAttempts()[firstNumber][secondNumber] != null) {
+									
+									showScreen.printResults(game.getArrayAttempts(),firstNumber, secondNumber, balls.getBlackBalls(), balls.getWhiteBalls());
+									
+									if(secondNumber == 3) { 
+										System.out.println("");
+									}
+								}
 							}
-							
-							game.setAttempt(game.getAttempt()+1); 
+						}
+
+							 
+						if((balls.getWhiteBalls() == 4 || game.getAttempt() == 10)) {
+							finish = true; 
 						}
 					}
 
@@ -65,7 +83,7 @@ public class Game {
 				
 			}
 			showScreen.clear();
-		} while(!"0".equals(showScreen.getOption()));
+		} while(!"0".equals(selection));
 		System.exit(0);
 	}
 }

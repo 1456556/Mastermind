@@ -4,13 +4,13 @@ import java.util.Random;
 
 public class Initialize {
 	private int arraySolution[];
-	private String arrayAttempts[][];
+	private String arrayAttempts[][]; 
 	private int attempt;
 	private Random randomCreator = new Random();
 	
-	public Initialize(int maxAttempt) {
-		this.arrayAttempts = new String[maxAttempt][6]; 
-		this.attempt = 1;
+	public Initialize(int maxAttempt) { 
+		this.arrayAttempts = new String[maxAttempt][4]; 
+		this.attempt = 0;
 		this.arraySolution = new int[4];
 	}
 	
@@ -18,7 +18,6 @@ public class Initialize {
 		for(int index = 0; index < 4; index++) {
 			arraySolution[index] = Math.abs(randomCreator.nextInt()) % 10;
 			random();
-			System.out.println(arraySolution[index]); //borrar
 		}
 		
 		return arraySolution;

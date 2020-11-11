@@ -3,22 +3,26 @@ package models;
 import java.util.Scanner;
 
 public class Balls {
-	private String color;
-	private int numberBalls;
+	private int blackBalls;
+	private int whiteBalls;
+	boolean checkIt;
+	private String stringArray[];
 	
-	public Balls(String color) {
-		this.color = color;
-		this.numberBalls = 0;  
+	public Balls() {
+		this.blackBalls = 0;  
+		this.whiteBalls = 0;
+		this.checkIt = false;
 	}
 	
 	public boolean checkWhiteBalls(String arrayAttempts[][], int arraySolution[], int attempt) {
-		boolean checkIt = false;
-		String stringArray[] = new String[arraySolution.length];
+		whiteBalls=0;
+		checkIt = false;
+		stringArray = new String[arraySolution.length];
 		
 		for (int index = 0; index < arraySolution.length; index++) {
 			stringArray[index] = String.valueOf(arraySolution[index]);
 			if(arrayAttempts[attempt][index].equals(stringArray[index])) {
-				this.numberBalls++;
+				this.whiteBalls++;
 				checkIt = true; 
 			}
 		}
@@ -27,15 +31,16 @@ public class Balls {
 	}
 	
 	public boolean checkBlackBalls(String arrayAttempts[][], int arraySolution[], int attempt) {
-		boolean checkIt = false;
-		String stringArray[] = new String[arraySolution.length];
+		blackBalls=0;
+		checkIt = false;
+		stringArray = new String[arraySolution.length];
 		
 		for (int index = 0; index < arraySolution.length; index++) {
 			for (int index1 = 1; index1 < arraySolution.length; index1++) {
 				stringArray[index] = String.valueOf(arraySolution[(index+index1)%4]);
 				if(arrayAttempts[attempt][index].equals(stringArray[index])) {
-					this.numberBalls++;
-					checkIt = true; 
+					this.blackBalls++;
+					checkIt = true;  
 				}
 			}
 		}
@@ -43,20 +48,40 @@ public class Balls {
 		return checkIt;
 	}
 	
-
-	public String getColor() {
-		return color;
+	
+	
+	public int getBlackBalls() {
+		return blackBalls;
 	}
 
-	public void setColor(String color) {
-		this.color = color;
+	public void setBlackBalls(int blackBalls) {
+		this.blackBalls = blackBalls;
 	}
 
-	public int getNumberBalls() {
-		return numberBalls;
+	public int getWhiteBalls() {
+		return whiteBalls;
 	}
 
-	public void setNumberBalls(int numberBalls) {
-		this.numberBalls = numberBalls;
+	public void setWhiteBalls(int whiteBalls) {
+		this.whiteBalls = whiteBalls;
 	}
+
+	public boolean isCheckIt() {
+		return checkIt;
+	}
+
+	public void setCheckIt(boolean checkIt) {
+		this.checkIt = checkIt;
+	}
+
+	public String[] getStringArray() {
+		return stringArray;
+	}
+
+	public void setStringArray(String[] stringArray) {
+		this.stringArray = stringArray;
+	}
+	
+
+
 }

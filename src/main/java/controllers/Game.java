@@ -47,7 +47,7 @@ public class Game {
 		showScreen.clear();
 		showScreen.printResults(game.getArrayAttempts());
 
-		if(game.getAttempt() == 10) {
+		if(game.getAttempt() == 10 && balls.getWhiteBalls() != 4) {
 			showScreen.lose();
 		}
 		

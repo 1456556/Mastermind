@@ -21,7 +21,7 @@ public class Balls {
 		
 		for (int index = 0; index < arraySolution.length; index++) {
 			stringArray[index] = String.valueOf(arraySolution[index]);
-			if(arrayAttempts[attempt][index].equals(stringArray[index])) {
+			if(arrayAttempts[attempt][index].equals(stringArray[index])) { 
 				this.whiteBalls++;
 				checkIt = true; 
 			}

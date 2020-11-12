@@ -49,43 +49,6 @@ public class InitializeTest {
 			boolean checkFailNumbers = mrn.checkNumber(mck.getArrayFailNumbers()[index]);
 			assertFalse(checkFailNumbers);
 		}
-		
-		/*
-		
-		boolean checkNum = mrn.checkNumber("1234");
-		assertTrue(checkNum);
-		
-		boolean checkNum2 = mrn.checkNumber("123");
-		assertFalse(checkNum2);
-		
-		boolean checkNum3 = mrn.checkNumber("12345");
-		assertFalse(checkNum3);
-		
-		boolean checkNum4 = mrn.checkNumber("a123");
-		assertFalse(checkNum4);
-		
-		boolean checkNum5 = mrn.checkNumber("123a");
-		assertFalse(checkNum5);
-		
-		boolean checkNum6 = mrn.checkNumber("abcd");
-		assertFalse(checkNum6);
-		
-		boolean checkNum7 = mrn.checkNumber("abc");
-		assertFalse(checkNum7);
-		
-		boolean checkNum8 = mrn.checkNumber("abcde");
-		assertFalse(checkNum8);
-		
-		boolean checkNum9 = mrn.checkNumber("abc1");
-		assertFalse(checkNum9);
-		
-		boolean checkNum10 = mrn.checkNumber("1bcd");
-		assertFalse(checkNum10);
-		
-		boolean checkNum11 = mrn.checkNumber("");
-		assertFalse(checkNum11);
-		
-		*/
 	}
 	
 

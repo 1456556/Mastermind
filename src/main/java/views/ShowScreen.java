@@ -16,25 +16,48 @@ public class ShowScreen {
 		System.out.print("Escull una opció: "); 
 	}
 	
-	public void values() { 
-		System.out.print("Introdueix la suposoció: ");
+	public void introduceNumber() { 
+		System.out.print("Valor: "); 
 	}
 	
-	public void printResults(String arrayAttempts[][], int firstNumber, int secondNumber, int blackBalls, int whiteBalls) {
-		System.out.print(arrayAttempts[firstNumber][secondNumber]);
-		if(secondNumber == 3) {
-			System.out.print("\t"+blackBalls);
-			System.out.print("\t"+whiteBalls);
-			System.out.print("");
-		}
-		
-		
+	public void printResults(String arrayAttempts[][]) { 
+		int count = 10;
+		for(int firstNumber = 9; firstNumber >= 0; firstNumber--) {
+			
+			if(count == 10) {
+				System.out.print(count+":  ");
+			}else {
+				System.out.print(" "+count+":  ");
+			}
+			count--;
+			
+			for(int secondNumber = 0; secondNumber < 4; secondNumber++) {
+				if(arrayAttempts[firstNumber][secondNumber] != null) {
+					System.out.print(arrayAttempts[firstNumber][secondNumber]);
+					if(secondNumber == 3) { 
+						System.out.print("\t N");
+						System.out.print("\t B");
+					}
+				}					
+			}
+			System.out.println("");
+		}	
 	}
 	
-	public void printBalls(int blackBalls, int whiteBalls) {
-		
+	public void win() {
+		System.out.println("Has guanyat!");
+		System.out.println("");
+		System.out.println("Apreta enter per continuar..");
+		new java.util.Scanner(System.in).nextLine();
 	}
 	
+	public void lose() {
+		System.out.println("Has perdut!");
+		System.out.println("");
+		System.out.println("Apreta enter per continuar..");
+		new java.util.Scanner(System.in).nextLine();
+	}
+
 	public void error() throws IOException {
 		System.out.println("ERROR: escull una opcio valida");
 		System.out.println("Apreta enter per continuar..");
@@ -43,8 +66,7 @@ public class ShowScreen {
 	
 	
 	public void checkNumber() {
-		System.out.println("ERROR: numero incorrecte");
-		System.out.println(""); 
+		System.out.println("\t ERROR: numero incorrecte");
 	}
 	
 	public void exit() {
@@ -54,7 +76,7 @@ public class ShowScreen {
 	}
 	
 	public void clear() {
-		for (int i = 0; i < 100; i++) System.out.println();
+		for (int i = 0; i < 200; i++) System.out.println();
 	}
 		
 }

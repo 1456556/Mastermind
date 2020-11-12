@@ -18,6 +18,7 @@ public class Initialize {
 		for(int index = 0; index < 4; index++) {
 			arraySolution[index] = Math.abs(randomCreator.nextInt()) % 10;
 			random();
+			System.out.print(arraySolution[index]); //borrar
 		}
 		
 		return arraySolution;

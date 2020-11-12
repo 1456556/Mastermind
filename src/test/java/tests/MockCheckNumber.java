@@ -6,7 +6,7 @@ public class MockCheckNumber {
 	
 	public MockCheckNumber() {
 		this.arrayCorrectNumbers = new String[3];
-		this.arrayFailNumbers = new String[10];
+		this.arrayFailNumbers = new String[10]; 
 	}
 	
 	public void introduceArrayCorrectNumbers() {

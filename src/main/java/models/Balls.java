@@ -39,49 +39,22 @@ public class Balls {
 			for (int index1 = 1; index1 < arraySolution.length; index1++) {
 				stringArray[index] = String.valueOf(arraySolution[(index+index1)%4]);
 				if(arrayAttempts[attempt][index].equals(stringArray[index])) {
-					this.blackBalls++;
-					checkIt = true;  
+					this.blackBalls++; 
+					checkIt = true;   
 				}
 			}
 		}
-		
+		 
 		return checkIt;
 	}
-	
 	
 	
 	public int getBlackBalls() {
 		return blackBalls;
 	}
 
-	public void setBlackBalls(int blackBalls) {
-		this.blackBalls = blackBalls;
-	}
-
 	public int getWhiteBalls() {
 		return whiteBalls;
 	}
-
-	public void setWhiteBalls(int whiteBalls) {
-		this.whiteBalls = whiteBalls;
-	}
-
-	public boolean isCheckIt() {
-		return checkIt;
-	}
-
-	public void setCheckIt(boolean checkIt) {
-		this.checkIt = checkIt;
-	}
-
-	public String[] getStringArray() {
-		return stringArray;
-	}
-
-	public void setStringArray(String[] stringArray) {
-		this.stringArray = stringArray;
-	}
-	
-
 
 }

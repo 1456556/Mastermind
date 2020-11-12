@@ -1,40 +1,39 @@
 package models;
 
+import java.util.HashSet;
 import java.util.Random;
+import java.util.Set;
 
-public class Initialize {
+public class Game {
 	private int arraySolution[];
 	private String arrayAttempts[][]; 
 	private int attempt;
 	private Random randomCreator = new Random();
 	
-	public Initialize(int maxAttempt) { 
-		this.arrayAttempts = new String[maxAttempt][4]; 
+	public Game(int maxAttempt) { 
+		this.arrayAttempts = new String[maxAttempt][6];   
 		this.attempt = 0;
 		this.arraySolution = new int[4];
 	}
 	
 	public int[] solution() {
-		for(int index = 0; index < 4; index++) {
-			arraySolution[index] = Math.abs(randomCreator.nextInt()) % 10;
-			random();
-			System.out.print(arraySolution[index]); //borrar
-		}
+		Set<Integer> alreadyUsedNumbers = new HashSet<>();
+		int total = 0;
 		
+		while (alreadyUsedNumbers.size() < 4) {
+			 int randomNumber = randomCreator.nextInt(10);
+			 if (!alreadyUsedNumbers.contains(randomNumber)){
+				 arraySolution[total] = randomNumber;
+				 alreadyUsedNumbers.add(randomNumber);
+				 
+				 System.out.print(arraySolution[total]); //borrar 
+				 total++;
+			 }
+		}
+
 		return arraySolution;
 	}
-	
-	public void random() {
-		while (arraySolution[1] == arraySolution[0])
-			arraySolution[1] = Math.abs(randomCreator.nextInt()) % 10;
 		
-		while (arraySolution[2] == arraySolution[1] || arraySolution[2] == arraySolution[0])
-			arraySolution[2] = Math.abs(randomCreator.nextInt()) % 10;
-		
-		while (arraySolution[3] == arraySolution[2] || arraySolution[3] == arraySolution[1] || arraySolution[3] == arraySolution[0])
-			arraySolution[3] = Math.abs(randomCreator.nextInt()) % 10;
-	}
-	
 	
 	public boolean checkNumber(String value) {
         if(value.length() != 4) {
@@ -58,24 +57,25 @@ public class Initialize {
         return arrayAttempts;
 	}
 	
+	public String[][] introduceBalls(int whiteBalls, int blackBalls) {
+		String white = String.valueOf(whiteBalls);
+		String black = String.valueOf(blackBalls);
+		
+		this.arrayAttempts[attempt][4] = white;
+		this.arrayAttempts[attempt][5] = black; 
+		
+		return arrayAttempts;
+	}
 	
 
 	public int[] getArraySolution() {
 		return arraySolution;
 	}
 
-	public void setArraySolution(int[] arraySolution) {
-		this.arraySolution = arraySolution;
-	}
-
 	public String[][] getArrayAttempts() {
 		return arrayAttempts;
 	}
-
-	public void setArrayAttempts(String[][] arrayAttempts) {
-		this.arrayAttempts = arrayAttempts;
-	}
-
+	
 	public int getAttempt() {
 		return attempt;
 	}
@@ -84,13 +84,10 @@ public class Initialize {
 		this.attempt = attempt;
 	}
 
-	public Random getRandomCreator() {
-		return randomCreator;
+	public void setArraySolution(int[] arraySolution) {
+		this.arraySolution = arraySolution;
 	}
-
-	public void setRandomCreator(Random randomCreator) {
-		this.randomCreator = randomCreator;
-	}
-
+	
+	
 
 }

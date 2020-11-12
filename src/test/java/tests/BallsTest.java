@@ -11,7 +11,7 @@ public class BallsTest {
 	@Test public void testCheckWhiteBalls() {
 		Balls whiteBalls = new Balls();
 		
-		String arrayAttempts[][] = new String[10][6];
+		String arrayAttempts[][] = new String[10][6]; 
 		arrayAttempts[0][0] = "1";
 		arrayAttempts[0][1] = "2";
 		arrayAttempts[0][2] = "3";
@@ -65,4 +65,27 @@ public class BallsTest {
 		
 		assertFalse(checkBalls1);
 	}
+	
+	@Test public void testGetBlackBalls() {
+		Balls blackBalls = new Balls();
+		int balls = 0;
+		
+		assertEquals(balls, blackBalls.getBlackBalls());
+		
+		balls = 4;
+		assertNotEquals(balls, blackBalls.getBlackBalls());
+		
+	}
+	
+	@Test public void testGetWhiteBalls() {
+		Balls whiteBalls = new Balls();
+		int balls = 0;
+		
+		assertEquals(balls, whiteBalls.getWhiteBalls());
+		
+		balls = 4;
+		assertNotEquals(balls, whiteBalls.getWhiteBalls());
+		
+	}
+	
 }

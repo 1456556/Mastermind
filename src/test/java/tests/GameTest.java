@@ -6,8 +6,6 @@ import models.Game;
 
 import static org.junit.Assert.*;
 
-import java.util.Arrays;
-
 public class GameTest {
 	
 	@Test public void testSolution() {
@@ -28,7 +26,7 @@ public class GameTest {
 			if(arraySolution[index] < 10 && arraySolution[index] >= 0) {
 				range = true; 
 			}
-			assertTrue(range);
+			assertTrue(range); 
 		}
 	}
 	

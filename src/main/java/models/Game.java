@@ -31,7 +31,7 @@ public class Game {
 			 }
 		}
 
-		return arraySolution;
+		return arraySolution; 
 	}
 		
 	

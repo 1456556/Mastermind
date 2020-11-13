@@ -33,17 +33,8 @@ public class MockCheckNumber {
 		return arrayCorrectNumbers;
 	}
 
-	public void setArrayCorrectNumbers(String[] arrayCorrectNumbers) {
-		this.arrayCorrectNumbers = arrayCorrectNumbers;
-	}
-
 	public String[] getArrayFailNumbers() {
 		return arrayFailNumbers;
 	}
-
-	public void setArrayFailNumbers(String[] arrayFailNumbers) {
-		this.arrayFailNumbers = arrayFailNumbers;
-	}
-
 
 }

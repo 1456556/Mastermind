@@ -23,7 +23,7 @@ public class Balls {
 			stringArray[index] = String.valueOf(arraySolution[index]);
 			if(arrayAttempts[attempt][index].equals(stringArray[index])) { 
 				this.whiteBalls++;
-				checkIt = true; 
+				checkIt = true;  
 			}
 		}
 		

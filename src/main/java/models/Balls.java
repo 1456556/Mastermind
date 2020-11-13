@@ -1,7 +1,5 @@
 package models;
 
-import java.util.Scanner;
-
 public class Balls {
 	private int blackBalls;
 	private int whiteBalls;

@@ -26,8 +26,13 @@ public class Play {
 		this.finish = false; 
 	}
 		
-	public void main(String[] args) {
-		do {
+	public static void main(String[] args) {
+		ShowScreen showScreen = new ShowScreen();
+		Scanner reader = new Scanner(System.in);
+		
+		String option;
+		
+		do { 
 			
 			showScreen.clear(); 
 			showScreen.instructions();
@@ -36,7 +41,13 @@ public class Play {
 			if("0".equals(option)) {
 				System.exit(0);
 			}
-						
+			
+			Balls balls = new Balls();
+			
+			String value;
+			boolean finish = false;
+			
+			Game game = new Game(10);			
 			game.solution();
 			
 			do {
@@ -71,9 +82,9 @@ public class Play {
 			showScreen.printResults(game.getArrayAttempts());
 
 			if(balls.getWhiteBalls() == 4) {
-				showScreen.win();		
+				showScreen.win(1);		
 			}else {
-				showScreen.lose();
+				showScreen.lose(1);
 			}
 			
 		}while(option != "0");
@@ -81,23 +92,35 @@ public class Play {
 	}
 	
 	
-	public void testMain(String selectedOption) {
+	public void testMain(String selectedOption, String[] values) {
 		do {
-			System.out.print(selectedOption);
-
+			
+			showScreen.clear(); 
+			showScreen.instructions();
+			
 			if(selectedOption.equals("0")) {
+				System.out.print(selectedOption); //borrar 
 				System.exit(0);
 			}
 						
 			game.solution();
 			
-			do {				
-				do {
-					if(game.checkNumber(value) == false) {};
-					
-				}while(game.checkNumber(value) == false);
+			do {
 				
-				game.introduceArrayAttempts(value);
+				showScreen.clear();
+				showScreen.printResults(game.getArrayAttempts());
+				
+				for(int index = 0; index < values.length; index++) {
+					
+					do {
+						showScreen.introduceNumber();
+						if(game.checkNumber(values[index]) == false) {showScreen.checkNumber(value);};
+						
+					}while(game.checkNumber(values[index]) == false);
+					
+					game.introduceArrayAttempts(values[index]);				
+					
+				}
 				
 				balls.checkWhiteBalls(game.getArrayAttempts(), game.getArraySolution(), game.getAttempt());
 				balls.checkBlackBalls(game.getArrayAttempts(), game.getArraySolution(), game.getAttempt());	
@@ -111,6 +134,15 @@ public class Play {
 				}
 				
 			}while(finish != true);
+			
+			showScreen.clear();
+			showScreen.printResults(game.getArrayAttempts());
+
+			if(balls.getWhiteBalls() == 4) {
+				showScreen.win(2);		
+			}else {
+				showScreen.lose(2);
+			}
 			
 		}while(selectedOption != "0");
 	}

@@ -26,10 +26,11 @@ public class Game {
 				 arraySolution[total] = randomNumber;
 				 alreadyUsedNumbers.add(randomNumber);
 				 
-				 System.out.print(arraySolution[total]); //borrar 
+				 System.out.print(arraySolution[total]); //borrar  
 				 total++;
 			 }
 		}
+		System.out.println(""); //borrar
 
 		return arraySolution; 
 	}

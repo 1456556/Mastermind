@@ -12,12 +12,13 @@ public class PlayTest {
 		MockPlay mockPlay = new MockPlay();
 		
 		mockPlay.introduceOptions();
-		mockPlay.introduceValues();
+		mockPlay.introduceValues(); 
 		
 		String options[] = mockPlay.getOptions();
-				
-		for(int index = 0; index < options.length; index++) {
-			play.testMain(options[index]);
+		String values[] = mockPlay.getValues();
+
+		for(int index = 1; index < options.length; index--) { 
+			play.testMain(options[index], values); 
 		}
 		
 		assertEquals(0,0);

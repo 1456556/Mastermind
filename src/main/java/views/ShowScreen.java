@@ -1,8 +1,5 @@
 package views;
 
-import java.io.IOException;
-import java.util.Scanner;
-
 public class ShowScreen {
 		
 	public ShowScreen() {
@@ -50,20 +47,24 @@ public class ShowScreen {
 		System.out.print("Intent:  \t"); 
 	}
 	
-	public void win() {
+	public void win(int main) {
 		System.out.println("");
 		System.out.println("Has guanyat!");
 		System.out.println("");
 		System.out.println("Apretar enter per continuar..");
-		new java.util.Scanner(System.in).nextLine();
+		if(main != 2) {
+			new java.util.Scanner(System.in).nextLine();
+		}
 	}
 	
-	public void lose() {
+	public void lose(int main) {
 		System.out.println("");
 		System.out.println("Has perdut!");
 		System.out.println("");
 		System.out.println("Apretar enter per continuar..");
-		new java.util.Scanner(System.in).nextLine();
+		if(main != 2) {
+			new java.util.Scanner(System.in).nextLine();
+		}
 	}
 	
 	public void checkNumber(String value) {
@@ -78,6 +79,5 @@ public class ShowScreen {
 	
 	public void clear() {
 		for (int i = 0; i < 200; i++) System.out.println();
-	}
-		
+	}		
 }

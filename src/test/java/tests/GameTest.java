@@ -75,9 +75,7 @@ public class GameTest {
 		assertNotEquals(arrayAttempts[0][4], "3"); 
 		assertNotEquals(arrayAttempts[0][5], "0");
 
-	}
-	
-	
+	}	
 	
 	@Test public void testGetArraySolution() {
 		Game game = new Game(10);

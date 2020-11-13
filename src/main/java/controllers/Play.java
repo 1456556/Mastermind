@@ -118,7 +118,8 @@ public class Play {
 						
 					}while(game.checkNumber(values[index]) == false);
 					
-					game.introduceArrayAttempts(values[index]);				
+					
+					game.introduceArrayAttempts(values[index]);
 					
 				}
 				

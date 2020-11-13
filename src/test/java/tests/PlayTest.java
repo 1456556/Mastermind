@@ -16,7 +16,7 @@ public class PlayTest {
 		
 		String options[] = mockPlay.getOptions();
 		String values[] = mockPlay.getValues();
-
+		
 		for(int index = 1; index < options.length; index--) { 
 			play.testMain(options[index], values); 
 		}

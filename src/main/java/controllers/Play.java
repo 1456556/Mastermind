@@ -114,13 +114,13 @@ public class Play {
 					
 					do {
 						showScreen.introduceNumber();
-						if(game.checkNumber(values[index]) == false) {showScreen.checkNumber(value);};
+						if(game.checkNumber(values[index]) == false) {showScreen.checkNumber(values[index]);};
 						
 					}while(game.checkNumber(values[index]) == false);
 					
 					game.introduceArrayAttempts(values[index]);				
 					
-				}
+				
 				
 				balls.checkWhiteBalls(game.getArrayAttempts(), game.getArraySolution(), game.getAttempt());
 				balls.checkBlackBalls(game.getArrayAttempts(), game.getArraySolution(), game.getAttempt());	
@@ -132,7 +132,7 @@ public class Play {
 				if((balls.getWhiteBalls() == 4 || game.getAttempt() == 10)) { 
 					finish = true; 
 				}
-				
+				}
 			}while(finish != true);
 			
 			showScreen.clear();

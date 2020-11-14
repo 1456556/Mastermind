@@ -6,66 +6,67 @@ import models.Balls;
 
 import static org.junit.Assert.*;
 
-public class BallsTest {
+/**
+ * @author 		Pol & Angel
+ * @name 		BallsTest.java
+ * @origin		Balls.java 
+ * @description	Test: fa test de totes les funcions i l'objecte Balls
+ * @test		testCheckWhiteBalls(), testCheckBlackBalls(), testGetBlackBalls(), testGetWhiteBalls()
+ */
+public class BallsTest { 
 	
+	/**
+	 * @testCheckWhiteBalls	
+	 * Crida l'objecte Balls per comprovar el metode checkWhiteBalls(arrayAttempts, arraySolution, 0)
+	 * Amb un mockObject fa la creacio d'uns arrays que es pasaran per parametre i comprovaran si els resultats son iguals que la solucio de Balls
+	 * Hi ha dos comprovacions per afirmar que funciona tot correctament, una que conte boles blanques i dona true i una altre que no conte cap i dona false
+	 */
 	@Test public void testCheckWhiteBalls() {
 		Balls whiteBalls = new Balls();
+		MockBalls mockBalls = new MockBalls();
 		
-		String arrayAttempts[][] = new String[10][6]; 
-		arrayAttempts[0][0] = "1";
-		arrayAttempts[0][1] = "2";
-		arrayAttempts[0][2] = "3";
-		arrayAttempts[0][3] = "4";
-		
-		int[] arraySolution = new int[4];
-		arraySolution[0] = 1;
-		arraySolution[1] = 2;
-		arraySolution[2] = 3;
-		arraySolution[3] = 4;
+		mockBalls.introduceArrayAttempts();
+		mockBalls.introduceSolutionWhite();
 
-		boolean checkBalls = whiteBalls.checkWhiteBalls(arrayAttempts, arraySolution, 0);
+		boolean checkBalls = whiteBalls.checkWhiteBalls(mockBalls.getArrayAttempts(), mockBalls.getArraySolution(), 0);
 		assertTrue(checkBalls);
 		
-		int[] arraySolution1 = new int[4];
-		arraySolution1[0] = 5;
-		arraySolution1[1] = 6;
-		arraySolution1[2] = 7;
-		arraySolution1[3] = 8;
+		mockBalls.introduceSolutionFalse();
 
-		boolean checkBalls1 = whiteBalls.checkWhiteBalls(arrayAttempts, arraySolution1, 0);
+		boolean checkBalls1 = whiteBalls.checkWhiteBalls(mockBalls.getArrayAttempts(), mockBalls.getArraySolution(), 0); 
 		
 		assertFalse(checkBalls1);
 	}
 	
+	/**
+	 * @testCheckBlackBalls	
+	 * Crida l'objecte Balls per comprovar el metode checkBlackBalls(arrayAttempts, arraySolution, 0)
+	 * Amb un mockObject fa la creacio d'uns arrays que es pasaran per parametre i comprovaran si els resultats son iguals que la solucio de Balls
+	 * Hi ha dos comprovacions per afirmar que funciona tot correctament, una que conte boles negres i dona true i una altre que no conte cap i dona false
+	 */
 	@Test public void testCheckBlackBalls() {
 		Balls blackBalls = new Balls();
+		MockBalls mockBalls = new MockBalls();
 		
-		String arrayAttempts[][] = new String[10][6];
-		arrayAttempts[0][0] = "1";
-		arrayAttempts[0][1] = "2";
-		arrayAttempts[0][2] = "3";
-		arrayAttempts[0][3] = "4";
-		
-		int[] arraySolution = new int[4];
-		arraySolution[0] = 4;
-		arraySolution[1] = 3;
-		arraySolution[2] = 2;
-		arraySolution[3] = 1;
+		mockBalls.introduceArrayAttempts();
+		mockBalls.introduceSolutionBlack();
 
-		boolean checkBalls = blackBalls.checkBlackBalls(arrayAttempts, arraySolution, 0);
+		boolean checkBalls = blackBalls.checkBlackBalls(mockBalls.getArrayAttempts(), mockBalls.getArraySolution(), 0);
 		assertTrue(checkBalls);
 		
-		int[] arraySolution1 = new int[4];
-		arraySolution1[0] = 5;
-		arraySolution1[1] = 6;
-		arraySolution1[2] = 7;
-		arraySolution1[3] = 8;
+		mockBalls.introduceSolutionFalse();
 
-		boolean checkBalls1 = blackBalls.checkWhiteBalls(arrayAttempts, arraySolution1, 0);
+		boolean checkBalls1 = blackBalls.checkWhiteBalls(mockBalls.getArrayAttempts(), mockBalls.getArraySolution(), 0);
 		
 		assertFalse(checkBalls1);
 	}
 	
+	/**
+	 * @testGetBlackBalls 
+	 * Comprova que el getBlackBalls() de l'objecte Balls funciona correctament i no hi ha errors
+	 * Es crea un objecte per defecte sense cap opcio amb les boles negres per defecte i retorna true ja que no s'ha modificat
+	 * Mes tard s'asigna a 4 el numero de boles negres i es comprova que retorna false ja que s'ha modificat en el test i no a l'objecte
+	 */
 	@Test public void testGetBlackBalls() {
 		Balls blackBalls = new Balls();
 		int balls = 0;
@@ -77,6 +78,12 @@ public class BallsTest {
 		
 	}
 	
+	/**
+	 * @testGetWhiteBalls 
+	 * Comprova que el getWhiteBalls() de l'objecte Balls funciona correctament i no hi ha errors
+	 * Es crea un objecte per defecte sense cap opcio amb les boles blanques per defecte i retorna true ja que no s'ha modificat
+	 * Mes tard s'asigna a 4 el numero de boles blanques i es comprova que retorna false ja que s'ha modificat en el test i no a l'objecte
+	 */
 	@Test public void testGetWhiteBalls() {
 		Balls whiteBalls = new Balls();
 		int balls = 0;

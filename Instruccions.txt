@@ -1,0 +1,26 @@
+Aquestes instruccions també estan a la clase Play.java com a comentari, podeu visualitzar-les millor un cop l'obriu. 
+
+Son les següents:
+
+	JUGAR NORMAL
+		Executar el codi per jugar amb la pantalla i la interaccio del usuari, aquesta part no fa test. Unicament es per jugar, Play: deixar tot com esta!
+		Opcions per jugar:
+			(1) Comprobar que el metode 'public static void main(String[] args)' no esta comentat
+			(2) Fer play a Play.java	
+	
+	FER TEST I JUGAR AMB MOCKS
+		Executa el codi automaticament amb la maquina, estan creats els valors amb mockObjects (100,0% en verd)
+		Opcions per fer el test:
+			(1) Comprobar que el metode 'public void testMain(String selectedOption, String[] values)' no esta comentat
+			(2) Comentar el metode 'public static void main(String[] args)'
+			(3) Fer play a TestPlay.java (coverage): ho executara tot automaticament amb mocks i els resultats del test
+			(4) Si intentes executar el programa sense comentar el main, no fara el test d'aquest i per tant sortira vermell al coverage (91,0% en verd)
+			(5) Si intentes executar el test desde Play.java no fara el test i tampoc executara el joc, ja que el main de l'aplicacio esta comentat i no el trobara (Error: no se ha encontrado el método principal en la clase controllers.Play)
+	
+
+Gràcies per fer test de la nostre aplicació!
+
+
+Salutacions,
+Angel Sacristán Ruiz
+Pol Reig Plazas

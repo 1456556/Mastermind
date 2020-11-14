@@ -52,9 +52,6 @@ public class ShowScreen {
 		System.out.println("Has guanyat!");
 		System.out.println("");
 		System.out.println("Apretar enter per continuar..");
-		if(main != 2) {
-			new java.util.Scanner(System.in).nextLine();
-		}
 	}
 	
 	public void lose(int main) {
@@ -62,9 +59,6 @@ public class ShowScreen {
 		System.out.println("Has perdut!");
 		System.out.println("");
 		System.out.println("Apretar enter per continuar..");
-		if(main != 2) {
-			new java.util.Scanner(System.in).nextLine();
-		}
 	}
 	
 	public void checkNumber(String value) {
@@ -73,8 +67,6 @@ public class ShowScreen {
 	
 	public void exit() {
 		System.out.println("Sortiras del joc!");
-		System.out.println("Apretar enter per continuar..");
-		new java.util.Scanner(System.in).nextLine();
 	}
 	
 	public void clear() {

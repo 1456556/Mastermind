@@ -26,11 +26,9 @@ public class Game {
 				 arraySolution[total] = randomNumber;
 				 alreadyUsedNumbers.add(randomNumber);
 				 
-				 System.out.print(arraySolution[total]); //borrar  
 				 total++;
 			 }
 		}
-		System.out.println(""); //borrar
 
 		return arraySolution; 
 	}
@@ -84,11 +82,5 @@ public class Game {
 	public void setAttempt(int attempt) {
 		this.attempt = attempt;
 	}
-
-	public void setArraySolution(int[] arraySolution) {
-		this.arraySolution = arraySolution;
-	}
-	
-	
 
 }

@@ -186,6 +186,8 @@ public class Play {
 				
 				if((balls.getWhiteBalls() == 4 || game.getAttempt() == 10)) {
 					finish = true; 
+				}else {
+					finish = false; 
 				}
 				
 				valuesIntent++;

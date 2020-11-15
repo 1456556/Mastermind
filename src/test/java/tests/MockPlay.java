@@ -25,8 +25,8 @@ public class MockPlay {
 	 * Asigna els valors a l'array options, el primer valor es per executar el joc i perdre, el segon valor es per executar el joc i guanyar, el tercer valor es per finalitzar del joc
 	 */
 	public void introduceOptions() {
-		options[0] = "1";
-		options[1] = "2";
+		options[0] = "2";
+		options[1] = "1";
 		options[2] = "0";
 	}
 	

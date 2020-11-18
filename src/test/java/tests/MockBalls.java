@@ -7,7 +7,7 @@ package tests;
  * @description	Mock: crea per defecte dos arrays, un d'intents i un de solucions. Esta fet comprovar les boles negres i blanques
  * @test		
  */
-public class MockBalls {
+public class MockBalls extends BallsTest{
 	
 	private String arrayAttempts[][];
 	private int arraySolution[];	

@@ -7,7 +7,7 @@ package tests;
  * @description	Mock: crea per defecte un array amb numeros correctes i una altre array amb tots els posibles errors que hi pot haber al joc
  * @test		introduceArrayCorrectNumbers(), introduceArrayFailNumbers(), getArrayCorrectNumbers(), getArrayFailNumbers()
  */
-public class MockCheckNumber {
+public class MockCheckNumber extends GameTest{
 	private String arrayCorrectNumbers[];
 	private String arrayFailNumbers[];
 	

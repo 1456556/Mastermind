@@ -7,7 +7,7 @@ package tests;
  * @description	Mock: crea per defecte una array d'opcions per fer diferents partides i tambe una per la introduccio dels valors
  * @test		introduceOptions(), introduceValues(), getOptions(), getValues()
  */
-public class MockPlay {
+public class MockPlay extends PlayTest {
 	private String options[];
 	private String values[];
 	

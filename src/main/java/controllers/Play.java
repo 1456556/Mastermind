@@ -74,7 +74,7 @@ public class Play {
 			
 			if("0".equals(option)) {
 				showScreen.exit();
-				System.exit(0);
+				System.exit(0); 
 			}
 			
 			Balls balls = new Balls();

@@ -22,7 +22,7 @@ public class Balls {
 	public Balls() {
 		this.blackBalls = 0;  
 		this.whiteBalls = 0;
-		this.checkIt = false;
+		this.checkIt = false; 
 	}
 	
 	/**

@@ -43,7 +43,7 @@ public class ShowScreen {
 	 * @param arrayAttempts	Array: pasa per parametre l'array d'intents arrayAttempts
 	 */
 	public void printResults(String arrayAttempts[][]) { 
-		System.out.println("\t        Boles \t Blanques  Negres" );
+		System.out.println("\t        Boles \t Blanques  Negres" ); 
 		int count = 10;
 		for(int firstNumber = 9; firstNumber >= 0; firstNumber--) {
 			

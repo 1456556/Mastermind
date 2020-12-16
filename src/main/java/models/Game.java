@@ -96,7 +96,7 @@ public class Game {
 		String black = String.valueOf(blackBalls);
 		
 		this.arrayAttempts[attempt][4] = white;
-		this.arrayAttempts[attempt][5] = black; 
+		this.arrayAttempts[attempt][5] = black;  
 		
 		return arrayAttempts;
 	}
